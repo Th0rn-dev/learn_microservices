@@ -23,7 +23,6 @@ public class RecommendationServiceImpl implements RecommendationService {
         this.serviceUtil = serviceUtil;
     }
 
-  @Override
   public List<Recommendation> getRecommendations(int productId) {
 
     if (productId < 1) {
