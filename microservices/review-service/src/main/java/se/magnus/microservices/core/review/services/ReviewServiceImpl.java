@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class ReviewServicesImpl implements ReviewService {
+public class ReviewServiceImpl implements ReviewService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ReviewServicesImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ReviewServiceImpl.class);
 
     private final ServiceUtil serviceUtil;
 
     @Autowired
-    public ReviewServicesImpl(ServiceUtil serviceUtil) {
+    public ReviewServiceImpl(ServiceUtil serviceUtil) {
         this.serviceUtil = serviceUtil;
     }
 

@@ -29,7 +29,6 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
         this.integration = integration;
     }
 
-    @Override
     public ProductAggregate getProduct(int productId) {
         Product product = integration.getProduct(productId);
 
@@ -52,7 +51,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
         String name = product.getName();
         int weight = product.getWeight();
 
-        List<RecommendationSummary> recommendationSummaries = (Objects.isNull(recommendations))
+        List<RecommendationSummary> recommendationSummaries = Objects.isNull(recommendations)
                 ? null
                 : recommendations.stream()
                 .map(r -> new RecommendationSummary(

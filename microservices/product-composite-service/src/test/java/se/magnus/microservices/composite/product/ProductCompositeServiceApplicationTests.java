@@ -89,7 +89,7 @@ class ProductCompositeServiceApplicationTests {
 				.expectHeader().contentType(APPLICATION_JSON)
 				.expectBody()
 				.jsonPath("$.productId").isEqualTo(PRODUCT_ID_OK)
-				.jsonPath("$.recommendation.length()").isEqualTo(1)
+				.jsonPath("$.recommendations.length()").isEqualTo(1)
 				.jsonPath("$.reviews.length()").isEqualTo(1);
 	}
 
